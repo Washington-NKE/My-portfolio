@@ -14,7 +14,7 @@
     --secon-bg-color:#292e33;
     --big-font:2.5rem;
     --normal-font:2rem;
-    --neon-box-shadow:0 0 ,5rem rgb(122,184,11);
+    --neon-box-shadow:0 0 .5rem rgb(122,184,11);
     --h2-font:3rem;
     --font-neon-text-shadow:0 0 10px rgba(122,184,11,0.3),
     0 0 20px rgba(122,184,11,0.3),
@@ -26,6 +26,22 @@
     0 0 150px rgba(122,184,11,0.3);
 }
 
+::-webkit-scollbar{
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--secon-bg-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color);
+    border-radius: 5rem;
+}
+
+
+
 body{
    
     font-family: "poppins",sans-serif;
@@ -34,11 +50,22 @@ body{
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 20px 10%;
+}
+
+header.sticky{
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--secon-bg-color);
+    padding: 12px 10%;
 }
 
 .logo{
@@ -56,9 +83,12 @@ span{
 }
 
 .navlist a{
+    display: inline-block;
     color: var(--text-color);
     font-weight: 500;
     padding: 10px 20px;
+    animation: slideAnimation 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
 }
 
 .navlist a:hover{
@@ -71,6 +101,10 @@ span{
     0 0 80px rgba(18,247,255,0.6),
     0 0 100px rgba(18,247,255,0.6),
     0 0 150px rgba(18,247,255,0.6);
+}
+
+.navList a.active{
+    color: var(--hover-color);
 }
 
 #menu-icon{
@@ -172,7 +206,7 @@ section{
     height: 45px;
 }
 
-.btn-box a.btn{
+.btn-box .btn{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -191,11 +225,11 @@ section{
     border: 2px solid var(--hover-color);
 }
 
-a.btn:hover{
+.btn:hover{
     color: var(--hover-color);
 }
 
-a.btn::before{
+.btn::before{
     content: "";
     position: absolute;
     top: 0;
@@ -207,20 +241,20 @@ a.btn::before{
     transition: .4s;
 }
 
-a.btn:hover::before{
+.btn:hover::before{
     width: 100%;
 }
 
-a.btn:nth-child(2){
+.btn:nth-child(2){
     background: var(--bg-color);
     color: var(--hover-color);   
 }
 
-a.btn:nth-child(2):hover{
+.btn:nth-child(2):hover{
     color: var(--bg-color)
 }
 
-a.btn:nth-child(2)::before{
+.btn:nth-child(2)::before{
     background: var(--hover-color);
 }
 
@@ -695,6 +729,232 @@ a.btn:nth-child(2)::before{
     color: var(--secon-bg-color);
 }
 
+/*Contact section css ------------------------------*/
+.contact{
+    background: var(--secon-bg-color);
+    width: 100%;
+}
+
+.contact form{
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+
+.contact form input,
+.contact form textarea{
+    width: 100%;
+    color: var(--text-color);
+    background: var(--bg-color);
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+    padding: .7rem;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.formBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.formBtn btn{
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/* footer css */
+footer{
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p{
+    color: #bdbdbd;
+}
+
+footer a{
+    display: inline-flex;
+    justify-content: center;
+    color: var(--text-color);
+    background: var(--hover-color);
+    padding: .6rem;
+    border-radius: 5px;
+}
+
+footer a i{
+    font-size: 1rem;
+    color: var(--secon-bg-color);
+}
+
+
+
+
+
+
+
+
+
+
+/* Break Points */
+@media(max-width:991px){
+    header,
+    header.sticky{
+        padding: 15px 5%;
+    }
+    footer{
+        padding: 15px 5%;
+    }
+    section{
+        padding: 50px 5%;
+    }
+    .navlist a{
+        padding: 8px 15px;
+    }
+    :root{
+        --big-font:2.2rem;
+        --normal-font:1.8rem;
+        --neon-box-shadow:0 0 .8rem rgb(122,184,11);
+        --h2-font:3rem;
+    }
+    .home-content {
+        margin-top: 5rem;
+    }
+
+    .social-icons{
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width:991px){
+    #menu-icon{
+        display: block;
+        transition: all .4s ease;
+    }
+    #menu-icon{
+        transform: rotate(-180deg);
+    }
+
+    .navlist{
+        display: flex;
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        padding: 0 5%;
+        transition: all .45s ease;
+    }
+    .navlist a{
+        display: block;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .navlist.open{
+        top: 100%;
+    }
+
+    .home{
+        grid-template-columns: 1fr;
+    }
+    .home-image{
+        margin-bottom: 5rem;
+    }
+    
+    .liquid-shape{
+        width: 80%;
+        left: 10%;
+        top: 13%;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+    }
+
+    .skill-main{
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons{
+        margin: 2.5rem 0 ;
+    }
+    footer p{
+        font-size: .8rem;
+    }
+}
+
+
+@media(max-width:420px){
+    html{
+        font-size: 80%;
+    }
+    footer p{
+        font-size: .6rem;
+    }
+    .filter-button .btn{
+        font-size: .8rem;
+    }
+    .img-about img{
+        width: 300px;
+    }
+    .info-about1,.info-about2,.info-about3{
+        display: none;
+    }
+
+    .img-about p{
+        font-size: 1rem;
+    }
+}
+
+/*parallax----------------------------------------------------*/
+/*
+.scroll-scale{
+    opacity: 0;
+    transform: scale(.9);
+    transform: all 2s;
+}
+
+.scroll-bottom{
+    opacity: 0;
+    transform: translateY(300px);
+    transition: 3s;
+}
+
+.scroll-top{
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: 3s;
+}
+
+.show-items{
+    opacity: 1;
+    transform: translate(0);
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -770,5 +1030,18 @@ a.btn:nth-child(2)::before{
     100%{
         background: var(--hover-color);
         box-shadow: var(--neon-box-shadow);
+    }
+}
+
+
+
+@keyframes slideAnimation{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
