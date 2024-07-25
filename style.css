@@ -9,21 +9,21 @@
 
 :root{
     --text-color:#f5f5f5;
-    --hover-color:#12f7ff;
-    --bg-color:#250821;
+    --hover-color:rgb(122,184,11);
+    --bg-color:rgb(18,28,43);
     --secon-bg-color:#292e33;
     --big-font:2.5rem;
     --normal-font:2rem;
-    --neon-box-shadow:0 0 ,5rem #12f7ff;
+    --neon-box-shadow:0 0 ,5rem rgb(122,184,11);
     --h2-font:3rem;
-    --font-neon-text-shadow:0 0 10px rgba(18,247,255,0.3),
-    0 0 20px rgba(18,247,255,0.3),
-    0 0 30px rgba(18,247,255,0.3),
-    0 0 40px rgba(18,247,255,0.3),
-    0 0 70px rgba(18,247,255,0.3),
-    0 0 80px rgba(18,247,255,0.3),
-    0 0 100px rgba(18,247,255,0.3),
-    0 0 150px rgba(18,247,255,0.3);
+    --font-neon-text-shadow:0 0 10px rgba(122,184,11,0.3),
+    0 0 20px rgba(122,184,11,0.3),
+    0 0 30px rgba(122,184,11,0.3),
+    0 0 40px rgba(122,184,11,0.3),
+    0 0 70px rgba(122,184,11,0.3),
+    0 0 80px rgba(122,184,11,0.3),
+    0 0 100px rgba(122,184,11,0.3),
+    0 0 150px rgba(122,184,11,0.3);
 }
 
 body{
@@ -242,7 +242,7 @@ a.btn:nth-child(2)::before{
     color: var(--hover-color);
     border: 2px solid var(--hover-color);
     transition: .6s;
-    box-shadow: 0 0 0.3rem #12f7ff;
+    box-shadow: 0 0 0.3rem rgb(122,184,11)f;
     border-radius: 5px;
     position: relative;
     z-index: 1;
@@ -571,7 +571,6 @@ a.btn:nth-child(2)::before{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #fff;
 }
 
 .circle .points{
@@ -581,8 +580,119 @@ a.btn:nth-child(2)::before{
     position: absolute;
     border-radius: 3px;
     transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+}
+
+.points.marked {
     animation: glow 0.04s linear forwards;
     animation-delay: calc(var(--i)*0.05s);
+}
+
+
+/*Portfolio section css ----------------------------------------------------*/
+
+.filter-buttons{
+    margin: 2rem;
+    text-align: center;
+}
+
+.filter-buttons .btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1.3rem;
+    color: var(--text-color);
+}
+
+.filter-buttons .btn:hover{
+    color: var(--hover-color);
+}
+
+.portfolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(270px,1fr));
+    gap: 2rem;
+}
+
+.port-box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #292e33;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.port-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.port-image img{
+    width: 100%;
+    opacity: .5s;
+    height: 100%;
+    transition: .5s;
+}
+
+.port-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,.2),rgb(122,184,11)); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    padding: 0 2rem;
+}
+
+.port-box:hover .port-content{
+    opacity: 1;
+}
+
+.port-box:hover .port-image img{
+    transform: scale(1.1);
+}
+
+.port-content h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.port-content p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+}
+
+.port-content a{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--hover-color);
+    outline: 2px solid #fff;
+}
+.port-content a i{
+    font-size: 1.3rem;
+    color: var(--secon-bg-color);
 }
 
 
