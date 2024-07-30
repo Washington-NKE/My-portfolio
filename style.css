@@ -318,7 +318,8 @@ section{
 .img-box img{
     width: 100%;
     max-width: 350px;
-    height: auto;
+    height: 100px;
+    overflow: hidden;
 }
 
 .liquid-shape{
@@ -521,7 +522,7 @@ section{
     text-align: center;
 }
 
-.skill-left .skill-bar .info{
+.skill-left .skill-bar .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -565,6 +566,11 @@ section{
 .skill-bar .bar .css{
     width: 62%;
     animation: css 5s;
+}
+
+.skill-bar .bar .other{
+    width: 60%;
+    animation: other 5s;
 }
 
 /* skill right */
@@ -1019,6 +1025,15 @@ footer a i{
     }
     100%{
         width: 62%;
+    }
+}
+
+@keyframes other{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
     }
 }
 
