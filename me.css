@@ -565,28 +565,28 @@ section{
 }
 
 .skill-bar .bar .html{
-    width: 72%;
+    width: 85%;
     animation: html 2s;
 }
 
 .skill-bar .bar .figma{
-    width: 90%;
+    width: 60%;
     animation: figma 3s;
 }
 
 .skill-bar .bar .javascript{
-    width: 80%;
+    width: 65%;
     animation: javascript 4s;
 }
 
 .skill-bar .bar .css{
-    width: 62%;
+    width: 74%;
     animation: css 5s;
 }
 
-.skill-bar .bar .other{
+.skill-bar .bar .react{
     width: 60%;
-    animation: other 5s;
+    animation: react 5s;
 }
 
 /* skill right */
@@ -1013,7 +1013,7 @@ footer a i{
         width: 0%;
     }
     100%{
-        width: 72%;
+        width: 85%;
     }
 }
 
@@ -1022,7 +1022,7 @@ footer a i{
         width: 0%;
     }
     100%{
-        width: 90%;
+        width: 60%;
     }
 }
 
@@ -1031,7 +1031,7 @@ footer a i{
         width: 0%;
     }
     100%{
-        width: 80%;
+        width: 65%;
     }
 }
 
@@ -1040,11 +1040,11 @@ footer a i{
         width: 0%;
     }
     100%{
-        width: 62%;
+        width: 74%;
     }
 }
 
-@keyframes other{
+@keyframes react{
     0%{
         width: 0%;
     }

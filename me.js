@@ -49,7 +49,6 @@ console.log(document.getElementById('toggle-button').addEventListener('click', f
     }
 }));
 
-console.log(moreText);
 //circle skill ////////////////////////////////////////
 
 const circle = document.querySelectorAll(".circle");
