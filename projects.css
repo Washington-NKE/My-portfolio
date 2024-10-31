@@ -1,0 +1,42 @@
+h1{
+    margin: 10px;
+    padding: 10px;
+}
+
+h2{
+    color: green;
+    margin: 30px;
+}
+
+.content{
+    display: flex;
+
+}
+
+.logo{
+    background: #121c3f;
+    margin: 20px;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    border: 2px solid #121c3f);
+    box-shadow: 2px 2px 2px green;
+    width: 260px;
+    height: 340px;
+    display: relative;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+
+}
+
+img{
+    height: 240px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.logo h5,
+.logo p{
+    font-size: 1rem;
+    color: #ffffff9f;
+}
