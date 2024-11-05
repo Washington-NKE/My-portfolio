@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Linking the Google fonts for icons-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
     <title>Washington Mwangi</title>
+    <!--Link Swipper js style-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!---->
 <link rel="stylesheet" href="me.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -416,6 +421,62 @@
     </div>
 </section>
 
+<!-- project section ---------------------------------->
+<section class="portfolio" id="portfolio">
+    <div class="main-text scroll-scale">
+        <span>What I have achieved</span>
+        <h2>My Projects</h2>
+    </div>
+
+    <div class="container">
+        <div class="sections">
+
+            <div class="sec1">
+                <h3>💻 Web Development Projects</h3>
+
+                <div class="container swiper">
+                    <div class="card-wrapper">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="assets/SukumaSlider.png" alt="" height="300px" width="250px" class="card-image">
+                                    <p class="badge developer">developer</p>
+                                    <h2 class="card-title">An image slider using swiper js</h2>
+                                    <button class="card-button material-symbols-rounded">
+                                        arrow_forward
+                                    </button>
+                                </a>
+                            </li>
+    
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="pics/11.jpeg" alt="" height="300px" width="250px" class="card-image">
+                                    <p class="badge designer">Graphics Designer</p>
+                                    <h2 class="card-title ">An image slider using swiper js</h2>
+                                    <button class="card-button material-symbols-rounded">
+                                        arrow_forward
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+    
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div  class="swiper-slide-button swiper-button-next"></div>
+                    </div>
+                </div>
+    
+    
+            </div>
+          
+           <h3>📸 Graphics Design Projects</h3>
+         No projects available!
+
+           <h3>🧩 UI/UX Projects</h3>
+           No projects available!
+        </div>
+</section>
+
 <!-- contact section ---------------------------------->
  <section id="contact" class="contact">
 <div class="main-text scroll-scale">
@@ -441,7 +502,10 @@
     <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
  </footer>
 
+    <!--Linking Swipper js script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="mixitup.min.js"></script>
     <script src="me.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>

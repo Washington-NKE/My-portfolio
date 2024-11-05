@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Import google fonts - Inter*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -751,6 +753,153 @@ section{
     color: var(--secon-bg-color);
 }
 
+/*Projects Section css......................................*/
+
+
+.card{
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(20, 28, 10, 0.5);
+    width: fit-content;
+    max-width: 250px;
+    text-align: center;
+    display: inline-block;
+}
+
+.card-img{
+    border-radius: 2px;
+}
+
+h4{
+    color: orange;
+}
+
+
+/*----------------------------------------*/
+
+.swiper{
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.card-wrapper{
+    max-width: 300px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;
+    padding: 18px;
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 2px 2px 2px rgba(20, 28, 10, 0.5);
+}
+
+.card-list .card-link .card-link:active {
+    cursor: grabbing;
+}
+
+.card-list . .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-title{
+    color: rgb(100, 70, 200);
+}
+
+.card-list  .card-link .badge{
+    color: #5372f0;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #dde4ff;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list  .card-link .badge.designer{
+    color: #822485;
+    background: #f7dff5;
+}
+
+.card-list  .card-link .badge.mobile{
+    color: #825a2b;
+    background: #ffe3d2;
+}
+
+.card-list  .card-link .badge.gamer{
+    color: #205c20;
+    background: #d6f8d6;
+}
+
+.card-list  .card-link .badge.software{
+    color: #856404;
+    background: #fff3cd;
+}
+
+.card-list .card-link .title{
+    font-size: 1.19px;
+    color: #000;
+    font-weight: 600;
+}
+
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    color: #5372f0;
+    border-radius: 50px;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372f0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button{
+    color: #fff;
+    background: #5372f0;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372f0;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button{
+    color: #5372f0;
+    margin-top: -35px;
+}
+
+@media screen and (max-width: 768px){
+  
+}
+
+
 /*Contact section css ------------------------------*/
 .contact{
     background: var(--secon-bg-color);
@@ -913,6 +1062,13 @@ footer a i{
     }
     footer p{
         font-size: .8rem;
+    }
+    .card-wrapper{
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button{
+        display: none;
     }
 }
 

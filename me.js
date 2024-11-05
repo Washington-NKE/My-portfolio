@@ -161,3 +161,4 @@ scrollScale.forEach((el)=>observer.observe(el));
 
 const scrollTop = document.querySelectorAll('.scroll-top');
 scrollScale.forEach((el)=>observer.observe(el));
+
