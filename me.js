@@ -90,7 +90,7 @@ function activeMenu(){
     
 }
 
-/*
+
 function activeMenu() {
     let len = sections.length;
     let currentSection = null;
@@ -115,7 +115,7 @@ function activeMenu() {
         console.log("No active section found");
     }
 }
-*/
+
 activeMenu();
 window.addEventListener('scroll',activeMenu);
 
