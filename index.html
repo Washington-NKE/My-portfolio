@@ -515,12 +515,12 @@
         <h2>Contact Me</h2>
     </div>
 
-    <form action="#" class="scroll-bottom">
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Your Email">
-        <input type="text" placeholder="Your Address">
-        <input type="text" placeholder="Phone Number">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+    <form action="https://api.web3forms.com/submit" method="POST" class="scroll-bottom">
+        <input type="hidden" name="access_key" value="d9018594-e99d-4d64-afca-24ae4c536716">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="email" placeholder="Your Email">
+        <input type="text" name="number" placeholder="Phone Number">
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
         <div class="btn-box formBtn">
             <button type="submit" class="btn">Send Message</button>
         </div>
